@@ -1,0 +1,116 @@
+html {
+    
+    font-size: 62.5%; /* Facilita rem = 10px */
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    max-width: 100%; 
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+$negro: #000010;
+$azulOscuro: #1b2c4e;
+$violetaGrisaseo: #4d5b99;
+$morado: #9090ee;
+$rosa: #e4caff;
+$gris: #e2e2e2;
+$grisOscuro: #6b6b6b;
+$blanco: #ffffff;
+
+$fuente-pricipal: "Rubik", sans-serif;
+
+.contenedor {
+    .contenedor_barra-principal {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: $morado;
+        margin: 0;
+        padding: 1.7rem;
+        font-family: $fuente-pricipal;
+
+        .buscador {
+            display: flex;
+
+            .titulo {
+                font-size: 3rem;
+                margin: 0;
+                color: $blanco;
+                margin-right: 3rem;
+            }
+            input {
+                padding: 1rem 13rem 1rem 1.2rem;
+                border: 1px solid $blanco;
+                border-radius: 5px;
+                font-size: 1.6rem;
+                margin-right: 1rem;
+            }
+            .boton {
+                padding: 1rem 2rem;
+                background-color: $azulOscuro;
+                color: $blanco;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 1.6rem;
+            }
+        }
+
+        .navegacion {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            
+            a {
+                font-size: 1.8rem;
+                color: $blanco;
+                border-right: 3px solid rgba(77, 91, 153, 0.5);
+                padding: 1rem 2.7rem 1rem 1rem;
+            }
+
+            i {
+                font-size: 2rem;
+                color: $blanco;
+            }
+        }
+    }
+
+    .contenedor_barra-secundario {
+        background-color: $gris;
+        padding: 1.6rem;
+        .navegacion {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8rem;
+
+            a {
+                display: flex;
+                gap: 1rem;
+                font-size: 1.6rem;
+                color: $grisOscuro;
+
+                i {
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+.contenedor_productos {
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem;
+}
