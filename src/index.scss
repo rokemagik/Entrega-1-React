@@ -20,10 +20,10 @@ img {
 }
 
 $negro: #000010;
-$azulOscuro: #1b2c4e;
-$violetaGrisaseo: #4d5b99;
-$morado: #9090ee;
-$rosa: #e4caff;
+$negroClaro: #1B1D1E;
+$azulMuyOscuro: #1b2c4e;
+$azulOscuro: #10117F;
+$grisAzulado: #2C3032;
 $gris: #e2e2e2;
 $grisOscuro: #6b6b6b;
 $blanco: #ffffff;
@@ -35,7 +35,7 @@ $fuente-pricipal: "Rubik", sans-serif;
         display: flex;
         justify-content: space-around;
         align-items: center;
-        background-color: $morado;
+        background-color: $azulOscuro;
         margin: 0;
         padding: 1.7rem;
         font-family: $fuente-pricipal;
@@ -58,7 +58,7 @@ $fuente-pricipal: "Rubik", sans-serif;
             }
             .boton {
                 padding: 1rem 2rem;
-                background-color: $azulOscuro;
+                background-color: $negro;
                 color: $blanco;
                 border: none;
                 border-radius: 5px;
@@ -87,7 +87,7 @@ $fuente-pricipal: "Rubik", sans-serif;
     }
 
     .contenedor_barra-secundario {
-        background-color: $gris;
+        background-color: $grisAzulado;
         padding: 1.6rem;
         .navegacion {
             display: flex;
@@ -99,7 +99,7 @@ $fuente-pricipal: "Rubik", sans-serif;
                 display: flex;
                 gap: 1rem;
                 font-size: 1.6rem;
-                color: $grisOscuro;
+                color: $gris;
 
                 i {
                     font-size: 1.8rem;
@@ -113,4 +113,6 @@ $fuente-pricipal: "Rubik", sans-serif;
     text-align: center;
     font-size: 2rem;
     padding: 2rem;
+    background-color: $negroClaro;
+    color: $blanco;
 }
