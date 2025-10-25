@@ -4,9 +4,26 @@ import ItemDetail from "../components/ItemDetail";
 import data from "../data/productos";
 
 function ItemDetailContainer({ greeting }) {
+    const [producto, setProductos] = useState(null);
+    const { idProducto } = useParams();
+
+    useEffect(() => {
+        const getProducto = new Promise((resolve) => {
+            setTimeout(() => {
+                resolve(data.find((p) => p.id === parseInt(idProducto)));
+            }, 500);
+        });
+
+        getProducto.then((res) => setProducto(res));
+    }, [idProducto]);
+
     return (
         <div className="contenedor_productos">
-            <h2>{greeting}</h2>
+            {producto ? (
+                <ItemDetail item={producto} />
+            ) : (
+                <h3>Cargando detalles del producto...</h3>
+            )}
         </div>
     );
 }
