@@ -23,12 +23,17 @@ $negro: #000010;
 $negroClaro: #1B1D1E;
 $azulMuyOscuro: #1b2c4e;
 $azulOscuro: #10117F;
+$azulClaro: #3234ce;
 $grisAzulado: #2C3032;
 $gris: #e2e2e2;
 $grisOscuro: #6b6b6b;
 $blanco: #ffffff;
 
 $fuente-pricipal: "Rubik", sans-serif;
+
+body {
+    background-color: $negroClaro;
+}
 
 .contenedor {
     .contenedor_barra-principal {
@@ -100,6 +105,7 @@ $fuente-pricipal: "Rubik", sans-serif;
                 gap: 1rem;
                 font-size: 1.6rem;
                 color: $gris;
+                align-items: center;
 
                 i {
                     font-size: 1.8rem;
@@ -109,10 +115,165 @@ $fuente-pricipal: "Rubik", sans-serif;
     }
 }
 
-.contenedor_productos {
-    text-align: center;
-    font-size: 2rem;
-    padding: 2rem;
-    background-color: $negroClaro;
+.contenedor_main {
     color: $blanco;
+    padding-bottom: 10rem;
+    
+    h2 {
+        text-align: center;
+        font-size: 2.4rem;
+        padding: 2rem;
+    }
+
+    .filtros_basicos {
+        display: flex;
+        justify-content: end;
+        padding-right: 29rem;
+        margin: 2rem;
+        font-size: 2rem;
+        gap: 3rem;
+
+        i {
+            color: $azulClaro;
+        }
+    }
+
+    .contenedor_productos {
+        display: flex;
+        max-width: 1100px;
+        width: 90%;
+        margin: 0 auto;
+        gap: 7rem;
+
+        .filtros_avanzados {
+            padding: 2rem 4rem;
+            background-color: $azulClaro;
+            border-radius: 5px;
+            h1 {
+                font-size: 2.8rem;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+                h3 {
+                    font-size: 2.3rem;
+                    padding-top: 1rem;
+                }
+                p {
+                    font-size: 2rem;
+                    color: $gris;
+                }
+                a {
+                    text-decoration: none;
+                    color: $blanco;
+                    font-size: 1.2rem;
+                    padding: .2rem;
+                    margin-top: .2rem;
+                }
+            }
+        }
+
+        .productos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+
+            .producto {
+                text-align: center;
+
+                .producto-cuerpo {
+                    background-color: $grisAzulado;
+                    height: 15rem;
+                    .titulo {
+                        font-size: 1.5rem;
+                        padding: 1rem 1rem;
+                    }  
+                    .precio {
+                        font-size: 1.8rem;
+                        margin-bottom: 2rem;
+                    }
+                    .boton {
+                        padding: 1rem 2rem;
+                        font-size: 2rem;
+                        background-color: $azulOscuro;
+                        color: $blanco;
+                        border-radius: 5px;
+
+                        &:hover {
+                            background-color: $azulClaro;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contenedor_productos {
+    .item-detail {
+        max-width: 930px;
+        width: 90%;
+        margin: 0 auto;
+        padding: 5rem;
+        a {
+            text-decoration: none;
+            color: $blanco;
+            font-size: 2.5rem;
+            padding: 2rem;
+            i {
+                color: $azulClaro;
+            }
+        }
+        div {
+            display: flex;
+            margin-top: 2rem;
+            img {
+                width: 40%;
+                border: 4px solid $azulClaro;
+            }
+            div {
+                padding: 5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                h2 {
+                    font-size: 2.3rem;
+                    color: $blanco;
+                }
+                p {
+                    font-size: 1.9rem;
+                    color: $blanco;
+                }
+                h3 {
+                    font-size: 2rem;
+                    color: $blanco;
+                }
+                button {
+                    padding: 1rem 2rem;
+                    background-color: $azulClaro;
+                    border: none;
+                    color: $blanco;
+                    border-radius: 5px;
+                    margin: 0 6rem;
+
+                    &:hover {
+                        background-color: $azulOscuro;
+                    }
+                }
+            }
+        }
+    }
+    .mensaje {
+        font-size: 2rem;
+        text-align: center;
+        color: $blanco;
+        padding: 3rem;
+    }
+}
+
+.mensaje_error {
+    color: $blanco;
+    padding: 5rem;
+    font-size: 3rem;
+    text-align: center;
 }

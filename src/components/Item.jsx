@@ -19,9 +19,9 @@ export default function Item({ producto }) {
             <div className="producto-cuerpo">
                 <h3 className="titulo">{nombre}</h3>
                 <p className="precio">${precioFormateado}</p>
-                <Link to={`/detalle/${id}`} className="boton" 
+                <Link to={`/detalle/${id}`} className="boton">
                     Ver Detalle
-                />
+                </Link>
             </div>
         </article>
     )

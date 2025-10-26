@@ -12,12 +12,8 @@ function App() {
             path="/"
             element={<ItemListContainer greeting="¡Bienvenido a TechZone!" />}
           />
-          <Route
-            path="/categoria/:idCategoria"
-            element={<ItemListContainer greeting="Categoría seleccionada" />}
-          />
           <Route path="/detalle/:idProducto" element={<ItemDetailContainer />} />
-          <Route path="*" element={<h2>Error 404 - Página no encontrada</h2>} />
+          <Route path="*" element={<h2 className="mensaje_error">Error 404 - Página no encontrada</h2>} />
         </Routes>
       </BrowserRouter>
     );
